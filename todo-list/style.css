@@ -10,10 +10,11 @@ body {
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
-  background-color: rgb(115, 157, 206);
-  display: flex;
+  background-color: rgb(113, 156, 206);
+  display: block;
   text-align: center;
   justify-content: center;
+  
 }
 
 .container {
@@ -23,6 +24,40 @@ body {
   background: white;
   border-radius: 5px;
   padding: 20px;
+  background: rgb(255, 255, 255);
+ border-radius: 5px;
+ border: 1px solid rgba(0, 0, 255, .2);
+ transition: all .2s;
+ box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+}
+.container:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+}
+.container button {
+  cursor: pointer;
+font-size: 17px;
+ text-transform: uppercase;
+ text-decoration: none;
+ padding: 1em 1em;
+ display: inline-block;
+ border-radius: 6em;
+ transition: all .2s;
+ border: none;
+ font-family: inherit;
+ font-weight: 500;
+ color: black;
+ background-color: white;
+}
+
+.container button:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container button:active {
+ transform: translateY(-1px);
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 ul{
