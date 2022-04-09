@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
 }
 
 body {
@@ -11,55 +13,98 @@ body {
   font-size: 1.3em;
   line-height: 1.5em;
   background-color: rgb(113, 156, 206);
-  display: block;
+}
+
+.container h1 {
   text-align: center;
-  justify-content: center;
-  
 }
 
 .container {
   max-width: 640px;
-  height: 300px;
+  height: 100%;
   margin: 50px auto;
   background: white;
   border-radius: 5px;
   padding: 20px;
   background: rgb(255, 255, 255);
- border-radius: 5px;
- border: 1px solid rgba(0, 0, 255, .2);
- transition: all .2s;
- box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 255, .2);
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  display: block;
 }
+
 .container:hover {
   box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
 }
+
 .container button {
   cursor: pointer;
-font-size: 17px;
- text-transform: uppercase;
- text-decoration: none;
- padding: 1em 1em;
- display: inline-block;
- border-radius: 6em;
- transition: all .2s;
- border: none;
- font-family: inherit;
- font-weight: 500;
- color: black;
- background-color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75em 0.5em;
+  display: inline-block;
+  border-radius: 0.5em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
 }
 
 .container button:hover {
- transform: translateY(-3px);
- box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #dfdfdf;
 }
 
 .container button:active {
- transform: translateY(-1px);
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-ul{
-  margin: 10px auto;
+.container input[type="text"] {
+  padding: 1em 1em;
+  width: 400px;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.container input[type="text"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container li button {
+  margin: 0px 0px 0px 50px;
+}
+
+.container li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.container li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 12px;
+  height: 25px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #00a8a8;
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 66.5%;
 }
